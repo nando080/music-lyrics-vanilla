@@ -105,6 +105,7 @@ body {
     background-color: var(--darker-gray);
     padding: 1.5rem;
     margin-bottom: 3rem;
+    position: relative;
 }
 
 .c-error-message {
@@ -250,4 +251,53 @@ body {
     font-size: 1.6rem;
     line-height: 1.8;
     color: var(--primary-text);
+}
+
+.c-loader {
+    display: block;
+    min-width: 100%;
+    min-height: 100%;
+    margin-top: 25%;
+}
+
+.c-loader__container {
+    width: 100%;
+    height: 5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: .5rem;
+}
+
+@keyframes load {
+    0% { transform: translateY(0) }
+    12.5% { transform: translateY(-100%) }
+    25% { transform: translateY(100%) }
+    50% { transform: translateY(0) }
+    75% { transform: translateY(0) }
+    100% { transform: translateY(0) }
+
+}
+
+.c-loader__ball {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    background-color: var(--primary-text);
+    border-radius: 50%;
+    animation-name: load;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+}
+
+.c-loader__ball:nth-child(2) {
+    animation-delay: .25s;
+}
+
+.c-loader__ball:nth-child(3) {
+    animation-delay: .5s;
+}
+
+.c-loader__ball:nth-child(4) {
+    animation-delay: .75s;
 }
