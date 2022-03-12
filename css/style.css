@@ -225,7 +225,7 @@ body {
     margin-bottom: .5rem;
 }
 
-.c-music-box__album {
+.c-music-box__album-name {
     color: var(--secondary);
     font-weight: 400;
     font-size: 1.3rem;
