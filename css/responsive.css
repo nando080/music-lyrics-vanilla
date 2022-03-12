@@ -1,0 +1,50 @@
+@media (max-width: 1200px) {
+
+    body {
+        background-size: auto;
+    }
+
+}
+
+@media (max-width: 1040px) {
+
+    body {
+        padding: 0 3rem;
+    }
+
+}
+
+@media (max-width: 640px) {
+
+    .l-header {
+        text-align: center;
+    }
+
+    .l-header__logo {
+        left: 0;
+    }
+
+    .l-search__input,
+    .c-music-list__info {
+        font-size: 1.6rem;
+    }
+
+    .c-music-button,
+    .c-music-button--pagination {
+        font-size: 1rem;
+    }
+
+    .c-music-button:not(.c-music-button--pagination) {
+        padding: 1rem 1.5rem;
+    }
+
+    .c-music-box {
+        flex-direction: column;
+    }
+
+    .c-music-box__info,
+    .c-music-box__lyric {
+        width: 100%;
+    }
+
+}

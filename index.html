@@ -1,25 +1,260 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="img/music-color.svg" type="image/x-icon">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
     <title>Letras de Músicas</title>
 </head>
+
 <body>
-    
+
     <header class="l-header u-container">
         <img class="l-header__logo" src="img/logo.png" alt="Letras de Músicas">
     </header>
 
     <section class="l-search u-container">
-        <input class="l-search__input" type="text" name="search" placeholder="digite o nome do autor ou da música" autofocus>
-        <button class="l-search__button">
+        <input class="l-search__input" type="text" name="search" placeholder="música ou autor" autofocus>
+        <button class="l-search__button u-animated-gradient">
             <img class="l-search__button-img" src="img/music-white.svg" alt="buscar música">
         </button>
     </section>
 
+    <main class="l-main u-container">
+        <!-- <p class="c-error-message">
+            Nenhuma ocorrência de <span class="c-error-message__search">"item buscado"</span> foi encontrada.
+        </p> -->
+
+
+
+
+
+
+         <!-- <ul class="c-music-list">
+
+            <li class="c-music-list__item">
+                <p class="c-music-list__info">
+                    <span class="c-music-list__music-autor">Led Zeppelin</span> - Stairway to heaven
+                </p>
+                <button class="c-music-button u-animated-gradient">
+                    letra
+                </button>
+            </li>
+
+            <li class="c-music-list__item">
+                <p class="c-music-list__info">
+                    <span class="c-music-list__music-autor">Led Zeppelin</span> - Stairway to heaven
+                </p>
+                <button class="c-music-button u-animated-gradient">
+                    letra
+                </button>
+            </li> <li class="c-music-list__item">
+                <p class="c-music-list__info">
+                    <span class="c-music-list__music-autor">Led Zeppelin</span> - Stairway to heaven
+                </p>
+                <button class="c-music-button u-animated-gradient">
+                    letra
+                </button>
+            </li> <li class="c-music-list__item">
+                <p class="c-music-list__info">
+                    <span class="c-music-list__music-autor">Led Zeppelin</span> - Stairway to heaven
+                </p>
+                <button class="c-music-button u-animated-gradient">
+                    letra
+                </button>
+            </li> <li class="c-music-list__item">
+                <p class="c-music-list__info">
+                    <span class="c-music-list__music-autor">Led Zeppelin</span> - Stairway to heaven
+                </p>
+                <button class="c-music-button u-animated-gradient">
+                    letra
+                </button>
+            </li> <li class="c-music-list__item">
+                <p class="c-music-list__info">
+                    <span class="c-music-list__music-autor">Led Zeppelin</span> - Stairway to heaven
+                </p>
+                <button class="c-music-button u-animated-gradient">
+                    letra
+                </button>
+            </li> <li class="c-music-list__item">
+                <p class="c-music-list__info">
+                    <span class="c-music-list__music-autor">Led Zeppelin</span> - Stairway to heaven
+                </p>
+                <button class="c-music-button u-animated-gradient">
+                    letra
+                </button>
+            </li> <li class="c-music-list__item">
+                <p class="c-music-list__info">
+                    <span class="c-music-list__music-autor">Led Zeppelin</span> - Stairway to heaven
+                </p>
+                <button class="c-music-button u-animated-gradient">
+                    letra
+                </button>
+            </li>
+            <li class="c-music-list__item">
+                <p class="c-music-list__info">
+                    <span class="c-music-list__music-autor">Led Zeppelin</span> - Stairway to heaven
+                </p>
+                <button class="c-music-button u-animated-gradient">
+                    letra
+                </button>
+            </li>
+            <li class="c-music-list__item">
+                <p class="c-music-list__info">
+                    <span class="c-music-list__music-autor">Led Zeppelin</span> - Stairway to heaven
+                </p>
+                <button class="c-music-button u-animated-gradient">
+                    letra
+                </button>
+            </li>
+            <li class="c-music-list__item">
+                <p class="c-music-list__info">
+                    <span class="c-music-list__music-autor">Led Zeppelin</span> - Stairway to heaven
+                </p>
+                <button class="c-music-button u-animated-gradient">
+                    letra
+                </button>
+            </li>
+            <li class="c-music-list__item">
+                <p class="c-music-list__info">
+                    <span class="c-music-list__music-autor">Led Zeppelin</span> - Stairway to heaven
+                </p>
+                <button class="c-music-button u-animated-gradient">
+                    letra
+                </button>
+            </li>
+            <li class="c-music-list__item">
+                <p class="c-music-list__info">
+                    <span class="c-music-list__music-autor">Led Zeppelin</span> - Stairway to heaven
+                </p>
+                <button class="c-music-button u-animated-gradient">
+                    letra
+                </button>
+            </li>
+            <li class="c-music-list__item">
+                <p class="c-music-list__info">
+                    <span class="c-music-list__music-autor">Led Zeppelin</span> - Stairway to heaven
+                </p>
+                <button class="c-music-button u-animated-gradient">
+                    letra
+                </button>
+            </li>
+            <li class="c-music-list__item">
+                <p class="c-music-list__info">
+                    <span class="c-music-list__music-autor">Led Zeppelin</span> - Stairway to heaven
+                </p>
+                <button class="c-music-button u-animated-gradient">
+                    letra
+                </button>
+            </li>
+            <li class="c-music-list__item">
+                <p class="c-music-list__info">
+                    <span class="c-music-list__music-autor">Led Zeppelin</span> - Stairway to heaven
+                </p>
+                <button class="c-music-button u-animated-gradient">
+                    letra
+                </button>
+            </li>
+
+        </ul>
+
+        <div class="c-pagination">
+            <button class="c-music-button c-music-button--pagination" data-js="prev">anterior</button>
+            <button class="c-music-button c-music-button--pagination" data-js="next">próxima</button>
+        </div> -->
+
+
+
+
+        <div class="c-music-box">
+            <div class="c-music-box__info">
+                <h2 class="c-music-box__title">Stairway to heaven</h2>
+                <h3 class="c-music-box__autor">Led Zeppelin</h3>
+                <img src="http://e-cdn-images.dzcdn.net/images/cover/460a0edd96f743be03b7405eac38c633/250x250-000000-80-0-0.jpg" alt="Lez Zeppelin IV" class="c-music-box__album-cover">
+                <p class="c-music-box__album-description">Album:</p>
+                <h4 class="c-music-box__album">Led Zeppelin IV</h4>
+                <a href="#" class="c-music-box__return">&lt;&lt; voltar</a>
+            </div>
+
+            <div class="c-music-box__lyric">
+                <p>There's a lady who's sure</p>
+                <p>All that glitters is gold</p>
+                <p>And she's buying a stairway to heaven</p>
+                <p>When she gets there, she knows</p>
+                <p>If the stores are all closed</p>
+                <p>With a word she can get what she came for</p>
+                <br>
+                <p>Ooh-ooh-ooh</p>
+                <p>Ooh-ooh-ooh-ooh-ooh</p>
+                <p>And she's buying a stairway to heaven</p>
+                <br>
+                <p>There's a sign on the wall</p>
+                <p>But she wants to be sure</p>
+                <p>'Cause you know sometimes words have two meanings</p>
+                <p>In a tree by the brook</p>
+                <p>There's a songbird who sings</p>
+                <p>Sometimes all of our thoughts are misgiven</p>
+                <br>
+                <p>Ooh, it makes me wonder</p>
+                <p>Ooh, makes me wonder</p>
+                <br>
+                <p>There's a feeling I get</p>
+                <p>When I look to the west</p>
+                <p>And my spirit is crying for leaving</p>
+                <p>In my thoughts, I have seen</p>
+                <p>Rings of smoke through the trees</p>
+                <p>And the voices of those who stand looking</p>
+                <br>
+                <p>Ooh, makes me wonder</p>
+                <p>Ooh, really makes me wonder</p>
+                <br>
+                <p>And it's whispered that soon</p>
+                <p>If we all call the tune</p>
+                <p>Then the piper will lead us to reason</p>
+                <p>And a new day will dawn</p>
+                <p>For those who stand long</p>
+                <p>And the forests will echo with laughter</p>
+                <br>
+                <p>Oh, whoa, whoa, whoa, whoa, oh</p>
+                <br>
+                <p>If there's a bustle in your hedgerow</p>
+                <p>Don't be alarmed now</p>
+                <p>It's just a spring-clean for the May Queen</p>
+                <p>Yes, there are two paths you can go by</p>
+                <p>But in the long run</p>
+                <p>There's still time to change the road you're on</p>
+                <br>
+                <p>And it makes me wonder</p>
+                <p>Oh, whoa, whoa, oh</p>
+                <br>
+                <p>Your head is humming and it won't go</p>
+                <p>In case you don't know</p>
+                <p>The piper's calling you to join him</p>
+                <p>Dear lady, can you hear the wind blow?</p>
+                <p>And did you know</p>
+                <p>Your stairway lies on the whispering wind?</p>
+                <br>
+                <p>And as we wind on down the road</p>
+                <p>Our shadows taller than our soul</p>
+                <p>There walks a lady we all know</p>
+                <p>Who shines white light and wants to show</p>
+                <p>How everything still turns to gold</p>
+                <p>And if you listen very hard</p>
+                <p>The tune will come to you, at last</p>
+                <p>When all are one and one is all, yeah</p>
+                <p>To be a rock and not to roll</p>
+                <br>
+                <p>And she's buying a stairway to heaven</p>
+            </div>
+        </div>
+
+    </main>
+
+    <script src="js/app.js"></script>
 </body>
+
 </html>
