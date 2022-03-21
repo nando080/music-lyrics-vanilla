@@ -1,25 +1,31 @@
 const searchInputEl = document.querySelector('.l-search__input')
 const searchButtonEl = document.querySelector('.l-search__button')
+const errorMessageContainerEl = document.querySelector('.c-error-message')
 
-const api = 'https://api.lyrics.ovh/suggest/'
+const api = 'https://api.lyrics.ovh/'
 
 /* https://api.lyrics.ovh/suggest/led%20zeppelin
 https://api.lyrics.ovh/v1/artist/title */
 
 
-//TODO TESTAR FUNÇÃO
 const formatInputValue = value => {
-    const formatedValue = value
+    const formatedValue =
+        value
         .toLowerCase()
-        .replace(/áàâãä/gi, 'a')
-        .replace(/éèêë/gi, 'e')
-        .replace(/íìîï/gi, 'i')
-        .replace(/óòôõö/gi, 'o')
-        .replace(/úùûü/gi, 'u')
-        .replace(/ç/gi, 'c')
-        .replace(/ñ/gi, 'n')
-        .replace(/'"!@#\$%¨&\*\(\)_-\+=§¬¢£`´\^~:;<>,.\?\/\{\}\[\]ªº/gi, '')
+        .replace(/[áàâãä]/gmi, 'a')
+        .replace(/[éèêë]/gmi, 'e')
+        .replace(/[íìîï]/gmi, 'i')
+        .replace(/[óòôõö]/gmi, 'o')
+        .replace(/[úùûü]/gmi, 'u')
+        .replace(/ç/gmi, 'c')
+        .replace(/ñ/gmi, 'n')
+        .replace(/["'!@#$£%¢¨¬&*()_\-+=§`´^~<>,.;:{}\[\]ªº?|\\\/]/gm, '')
+        .replace('   ', ' ')
+        .replace('  ', ' ')
     return formatedValue
+}
+
+const showErrorMessage = searchTerme => {
 }
 
 const fetchSongList = async url => {
@@ -31,7 +37,8 @@ const fetchSongList = async url => {
 const searchInputHandle = () => {
     const inputValue = searchInputEl.value
     if (inputValue !== '') {
-        const url = `${api}suggest/${inputValue}`
+        console.log(formatInputValue(inputValue))
+        const url = `${api}suggest/${formatInputValue(inputValue)}`
         fetchSongList(url)
     }
 }
