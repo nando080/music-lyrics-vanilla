@@ -61,7 +61,10 @@ const getHTMLSongs = songs => {
 
 const insertSongsIntoDOM = songs => {
     clearMainContainer()
-    mainContainerEl.innerHTML = songs.join()
+    const songsContainer = document.createElement('ul')
+    songsContainer.setAttribute('class', 'c-music-list is-active')
+    songsContainer.innerHTML = songs.join()
+    mainContainerEl.appendChild(songsContainer)
 }
 
 const paginationHandle = (prev, next) => {
@@ -82,9 +85,15 @@ const paginationHandle = (prev, next) => {
     }
 }
 
+const hideSongListPagination = () => {
+    const songsContainerEl = document.querySelector('.c-music-list')
+    songsContainerEl.classList.remove('is-active')
+    paginationContainerEl.classList.remove('is-active')
+}
+
 const fetchSongList = async searchTerme => {
-    const url = `${api}/suggest/${formatInputValue(searchTerme)}`
-    const response = await fetch(url)
+    const songsUrl = `${api}/suggest/${formatInputValue(searchTerme)}`
+    const response = await fetch(songsUrl)
     const list = await response.json()
     if (list.data.length < 1) {
         showErrorMessage(searchTerme)
@@ -97,9 +106,17 @@ const fetchSongList = async searchTerme => {
 const loadMoreSongs = async url => {
     const response = await fetch(`https://cors-anywhere.herokuapp.com/${url}`)
     const list = await response.json()
-    console.log(list)
     insertSongsIntoDOM(getHTMLSongs(list.data))
     paginationHandle(list.prev, list.next)
+}
+
+const fetchLyric = async (artist, title) => {
+    const lyricUrl = `${api}/v1/${artist}/${title}`
+    const reponse = await fetch(lyricUrl)
+    const data = await reponse.json()
+    if (data.error) {
+        console.log(data.error);
+    }
 }
 
 const searchInputHandle = () => {
@@ -128,5 +145,15 @@ paginationContainerEl.addEventListener('click', event => {
             loadMoreSongs(elementDataset.next)
             return
         }
+    }
+})
+
+mainContainerEl.addEventListener('click', event => {
+    const target = event.target
+    if (target.classList.contains('c-music-button')) {
+        console.log(target.dataset.title)
+        console.log(target.dataset.artist)
+        hideSongListPagination()
+        fetchLyric(target.dataset.artist, target.dataset.title)
     }
 })
