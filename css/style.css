@@ -254,6 +254,7 @@ body {
     font-weight: 300;
     padding: .5rem 1.5rem .5rem 0rem;
     transition: all ease-in-out .3s;
+    cursor: pointer;
 }
 
 .c-music-box__return:hover {
