@@ -166,13 +166,11 @@ const fetchSongList = async searchTerme => {
     }
     insertSongsIntoDOM(getHTMLSongs(list.data))
     paginationHandle(list.prev, list.next)
-    console.log(list.data[0])
 }
 
 const loadMoreSongs = async url => {
     const response = await fetch(`https://cors-anywhere.herokuapp.com/${url}`)
     const list = await response.json()
-    console.log(list)
     insertSongsIntoDOM(getHTMLSongs(list.data))
     paginationHandle(list.prev, list.next)
 }
@@ -185,7 +183,6 @@ const fetchLyric = async (artist, title, album, cover) => {
         showNotFoundError(artist, title)
         return
     }
-    console.log(data);
     showLyric(artist, title, album, cover, data.lyrics)
 }
 
